@@ -1,0 +1,8 @@
+1 - Precisa ter uma conta no DockerHub
+2 - docker image ls (lista as imagens)
+3 - escolhe uma imagem, e a partir da imagem, cria uma nova tag
+exemplo: docker image tag ex-simple-build dockercod3r/simple-build:1.0
+4 - fazer login - docker login --username=username
+5 - digita a senha
+6 - docker image push dockercod3r/simple-build
+7 - Feito

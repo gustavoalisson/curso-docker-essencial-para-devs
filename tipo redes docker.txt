@@ -1,0 +1,10 @@
+Modelo padrão de Rede do Docker 
+- Bridge = Ponte que o Docker cria entre as interfaces de rede dos containers
+
+Tipos de Redes
+* None Network
+* Bridge Network (padrão)
+* Host Network
+* Overlay Network (swarm)
+
+- docker network ls
