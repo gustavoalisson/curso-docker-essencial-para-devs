@@ -1,0 +1,82 @@
+Verificar os containers que estão rodando
+* docker container ps
+
+docker container run -p 8080:80 -v C/Users/gusta/OneDrive/Documentos/curso-docker/ex-volume/html:/usr/share/nginx/html nginx
+
+Mapeando diretórios para o container > 
+
+docker run --rm -p 8082:80 -v C:/Users/gusta/OneDrive/Documentos/curso-docker/ex-volume/html:/usr/share/nginx/html nginx
+
+Rodar em background > 
+
+docker container run -d --name ex-daemon-basic -p 8080:80 -v C:/Users/gusta/OneDrive/Documentos/curso-docker/ex-volume/html:/usr/share/nginx/html nginx 
+
+o que é um container ? 
+
+é uma forma de empacotar as aplicações com tudo que eles precisam dentro do pacote, incluindo 
+as dependencias e toda configuração necessária.  
+
+docker run - cria um novo container a partir de uma imagem / seja com uma versao especifica ou mais recente
+
+
+3 comandos básicos - gerenciar container 
+
+* docker container start - iniciar um container parado
+* docker container restart - reinicia o container
+* docker container stop - para o container
+
+outros comandos para ter acesso a container que esta em background 
+
+* docker container ls
+* docker container list
+* docker container ps 
+* docker container ls -a
+* docker container list -a 
+* docker container ps -a 
+* docker container logs name_container
+* docker container inspect name_container
+* docker container exec name_container uanme -or
+* docker volume ls
+- docker exec -it containerId /bin/bash
+
+
+Diferenças entre imagem e container 
+
+Image = Classe 
+Container = Objeto 
+
+a partir de uma imagem, é possível criar muitos containers. 
+
+* docker container --help
+* docker image --help 
+* docker volume --helpe
+
+criar uma imagem a partir de um Docker file...
+docker image build -t genesys:0.0.1 .
+
+
+COMANDOS BÁSICOS NO GERENCIAMENTO DE IMAGES
+
+docker image pull - responsavel por baixar image do docker Hub 
+docker image ls - listar as images 
+docker image rm - remover image, remover por tag, ou varias tags 
+docker image inspect - documento json com informacoes importantes 
+docker image tag - passa dois parametros, a image de origem e o nome da tag desejada
+docker image build - arquivo descritor do docker, construir image... 
+docker image push - cria image, publicar registry local ou publicar no docker hub 
+
+docker run --rm --env-file .env -v C:/Users/gusta/OneDrive/Documentos:/mnt/audios -v C:/Users/gusta/OneDrive/Documentos/wsl_docker_volume/logs:/usr/app/logs genesys:0.0.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
