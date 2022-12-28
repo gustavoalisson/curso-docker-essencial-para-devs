@@ -3,6 +3,15 @@ Modelo padrão de Rede do Docker
 
 Tipos de Redes
 * None Network
+Docker Host
+
+ isolado       isolado        isolado 
+Container A | Container B | Container C 
+
+Não tem acesso entre si.. Não tem acesso ao mundo exterior... 
+
+docker container run -d --net none debian
+
 * Bridge Network (padrão)
 * Host Network
 * Overlay Network (swarm)
